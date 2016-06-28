@@ -63,7 +63,7 @@ class Vantage_CircleIcon_Widget extends WP_Widget {
 
 			<?php if(!empty($instance['text'])) : ?><p class="text"><?php echo wp_kses_post($instance['text']) ?></p><?php endif; ?>
 			<?php if(!empty($instance['more_url'])) : ?>
-				<a href="<?php echo esc_url($instance['more_url']) ?>" class="btn btn-primary"><?php echo !empty($instance['more']) ? esc_html($instance['more']) : __('More Info', 'vantage') ?> <i></i></a>
+				<a href="<?php echo esc_url($instance['more_url']) ?>" class="btn btn-primary" style="color: white;" ><?php echo !empty($instance['more']) ? esc_html($instance['more']) : __('More Info', 'vantage') ?> <i></i></a>
 			<?php endif; ?>
 		</div>
 		<?php

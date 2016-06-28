@@ -1458,7 +1458,7 @@ article.page.post-with-thumbnail-icon .entry-main {
   clear: both;
 }
 .entry-content a {
-  color: #ECF0F3;
+  color: #333;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
