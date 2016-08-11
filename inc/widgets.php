@@ -290,7 +290,7 @@ class Vantage_Headline_Widget extends WP_Widget {
 		?>
 		<h1><?php echo esc_html($instance['headline']) ?></h1>
 		<div class="decoration"><div class="decoration-inside"></div></div>
-		<h3><?php echo wp_kses_post($instance['sub_headline']) ?></h3>
+		<h3><b><i><?php echo wp_kses_post($instance['sub_headline']) ?></i></b></h3>
 		<?php
 
 		echo $args['after_widget'];
