@@ -35,7 +35,28 @@
 
 	<?php do_action( 'vantage_after_masthead' ); ?>
 
-	<?php vantage_render_slider() ?>
+	<!--<?php vantage_render_slider() ?>-->
+	<center>
+		<div id="placeholder"></div>
+		<script src="wp-content/themes/linuxfree-wp-theme/js/gol.js"></script>
+	</center>
+
+
+	<script>
+	jQuery("#stop").click( function(){
+		console.log("Stop");
+		bbTerrarium.stop();
+		jQuery("#stop").hide();
+		jQuery("#go").show();
+
+	});
+	jQuery("#go").click( function(){
+		console.log("Start");
+		bbTerrarium.animate();
+		jQuery("#stop").show();
+		jQuery("#go").hide();
+	});
+	</script>
 
 	<?php do_action( 'vantage_before_main_container' ); ?>
 

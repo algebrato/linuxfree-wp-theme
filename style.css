@@ -3806,9 +3806,15 @@ span.jwcontrols span button {
     display: none;
   }
 }
-.rwd-table th, .rwd-table td {
+
+.rwd-table th{
+	display: none;
+}
+
+.rwd-table td {
   text-align: left;
 }
+
 @media (min-width: 480px) {
   .rwd-table th, .rwd-table td {
     display: table-cell;
@@ -3858,3 +3864,18 @@ h1 {
   color: #dd5;
 }
 
+/*COSE UTILI PER GAMEOFLIFE*/
+
+.gameoflife {
+	height: 100px;
+	width: 100px;
+}
+
+.button-play {
+	width: 14px;
+	height: 14px;
+}
+.button-stop {
+	width: 14px;
+	height: 14px;
+}
