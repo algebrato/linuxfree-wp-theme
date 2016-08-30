@@ -1,8 +1,8 @@
 var larg=jQuery("#isingDIV").width();
 var size=150;  
 var dimension=larg/size;
-if( dimension > 3 ){
-	dimension=3;
+if( dimension > 2 ){
+	dimension=2;
 }
 var IsingModel = new terra.Terrarium(size, size, {
   id: 'IsingTerrarium',
