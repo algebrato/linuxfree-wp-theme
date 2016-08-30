@@ -1,8 +1,8 @@
 var larg=jQuery("#isingDIV").width();
 var size=150;  
 var dimension=larg/size;
-if( dimension > 4 ){
-	dimension=4;
+if( dimension > 3 ){
+	dimension=3;
 }
 console.log(dimension);
 console.log(Math.floor(dimension));
