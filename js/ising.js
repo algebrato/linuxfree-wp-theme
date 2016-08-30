@@ -33,20 +33,28 @@ terra.registerCA({
 	if (counter==size*size)
 	{ 
 		counter=magnetization=0;
-	} 
-	magnetization +=this.state/(size*size);
-	deltaE = 0;
-	for (var i = 0; i < neighbors.length; i++){ 
-		deltaE += neighbors[i].creature.state;
 	}
-	if (neighbors.length<8)
-		deltaE *= 8/neighbors.length;
-	deltaE *= this.state;  
-	if (deltaE<0)          
-		this.state *= -1;  
-	else if (Math.random() < Math.min(1.0,Math.exp(-deltaE*0.5/temp)) )
-	{ 
-		this.state *= -1; 
+	if(Math.random() > 0.9 )
+	{	
+		magnetization +=this.state/(size*size);
+		deltaE = 0;
+		for (var i = 0; i < neighbors.length; i++)
+		{ 
+			deltaE += neighbors[i].creature.state;
+		}
+		if (neighbors.length<8)
+		{
+			deltaE *= 8/neighbors.length;
+		}
+		deltaE *= this.state;  
+		if (deltaE<0)
+		{
+			this.state *= -1;  
+		}
+		else if (Math.random() < Math.min(1.0,Math.exp(-deltaE*0.5/temp)) )
+		{ 
+			this.state *= -1; 
+		}
 	}
   }
 },function (){
