@@ -11,8 +11,11 @@ if( larg > 1023 ){
 }
 console.log(sizex);
 var size=60/(2*dim/10);
-var bbTerrarium = new terra.Terrarium
-(sizex,size,"GameOfLife",dim,document.getElementById('placeholder'));
+var bbTerrarium = new terra.Terrarium(sizex,size,{
+	id: "GameOfLife",
+	cellSize: dim,
+	insertAfter: document.getElementById('placeholder')
+});
 
 terra.registerCreature({
   type: 'piante',
